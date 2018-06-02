@@ -1,0 +1,35 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://LeoBogod22.github.io/HikingApp",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "elemental": "^0.6.1",
+    "node": "8.10.0",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.2",
+    "react-geocode": "0.0.9",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-skycons": "^0.7.0",
+    "react-toggle-display": "^2.2.0",
+    "skycons": "^1.0.0",
+    "stargazing-time": "^1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "gh-pages": "^1.1.0"
+  }
+}
