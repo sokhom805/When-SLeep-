@@ -1117,11 +1117,11 @@ body {
 
 
 
-  .wrap {
+  .wrap2 {
     position: relative;
     /* left: 900px; */
     top: -520px;
-    left: 950px;
+       left: 500px
   }
 
   
@@ -1130,14 +1130,14 @@ body {
 
     height: 475px;
     width: 400px;
-    right: 250px;
-  left: 500px;
+  
+  left: 1110px;
   position:relative;
 /**/
     /* W3C */
     
     /* IE6-9 fallback on horizontal gradient */
-    border-radius: 10px;
+
     top: calc(50% - 145px);
     left: calc(50% - 200px);
  
@@ -1155,7 +1155,29 @@ body {
     width: 100%;
 
   }
+.wrapper{
 
+
+    position:  relative;
+    left: 650px;
+}
+
+
+#results{
+position: relative;
+    left: 800px;
+    top: 190px;
+   
+
+
+  }
+
+  @media screen and (max-width: 600px) {
+ input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
   .left,
   .date,
   .right {

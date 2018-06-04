@@ -11,64 +11,11 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props;
-    this.getWeather = this.getWeather.bind(this);
+   
     this.getTrail=this.getTrail.bind(this);
        this.getDate=this.getDate.bind(this);
   }
 
-getWeather = async (e) => {
-    e.preventDefault();
-
-    this.setState({ showResults: true });
-    const city = e.target.city.value;
-
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
-    https://www.hikingproject.com/data/get-trails-by-id?ids=7000108,7002175,7005207,7001726,7005428&key=YOU
-    const data = await api_call.json();
-
-    if (city) {
-      this.setState({
-        temperature: data.main.temp,
-        city: data.name,
-        clouds: data.clouds.all,
-        main: data.weather[0].main,
-        icon: data.weather[0].icon,
-        rain: data.rain,
-        pressure: data.main.pressure,
-        humidity: data.main.humidity,
-        description: data.weather[0].description,
-        error: ""
-      });
-
-    } else {
-      this.setState({
-        temperature: undefined,
-        city: undefined,
-        country: undefined,
-        humidity: undefined,
-        description: undefined,
-        pressure: undefined,
-        rain: undefined,
-        error: "Please enter the values."
-      });
-    }
-
-    var clouds = data.clouds.all;
-
-    if (clouds > 30) {
-      this.setState({
-        msg: " Poor  conditions for stargazing!! "
-      })
-    }
-    else {
-
-      this.setState({
-        msg: " Good conditions for stargazing! no rain in forecast! "
-      })
-    }
-
-  }
-  
 
 
   getTrail = async (e) => {
@@ -84,7 +31,9 @@ getWeather = async (e) => {
 
 
     const api_call = await fetch(`https://api.wunderground.com/api/b1049a092a7f69ea/astronomy/q/${country}/${city}.json`);
-
+    const api_call2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
+  
+const data2 = await api_call2.json();
     const data = await api_call.json();
 
     if (city) {
@@ -99,7 +48,17 @@ getWeather = async (e) => {
         sunset: data.sun_phase.sunset.hour,
         sunsets: data.sun_phase.sunset.minute,
         sunrise: data.sun_phase.sunrise.hour,
-        sunrises: data.sun_phase.sunrise.minute
+          temperature: data2.main.temp,
+        city: data2.name,
+        clouds: data2.clouds.all,
+        main: data2.weather[0].main,
+        icon: data2.weather[0].icon,
+        rain: data2.rain,
+        pressure: data2.main.pressure,
+        humidity: data2.main.humidity,
+        description: data2.weather[0].description,
+        sunrises: data.sun_phase.sunrise.minute,
+         error: ""
 
 
       });
@@ -109,9 +68,23 @@ getWeather = async (e) => {
         sunset: undefined
       });
     }
+  
+
+var clouds = data2.clouds.all;
+
+    if (clouds > 30) {
+      this.setState({
+        msg: " Poor  conditions for stargazing!! "
+      })
+    }
+    else {
+
+      this.setState({
+        msg: " Good conditions for stargazing! no rain in forecast! "
+      })
+    }
+
   }
-
-
   getDate() {
     var date = new Date().getDate();
     var month = new Date().getMonth() + 1;
@@ -133,7 +106,8 @@ getWeather = async (e) => {
     <Nav />
 
 
-    <p> Search bellow </p>
+   <h1 id="c"> Search </h1>
+   <br></br>   <br></br>
       <div className="c">
 
     <div className="row">
@@ -141,20 +115,14 @@ getWeather = async (e) => {
 <br></br><br></br>
       <div id="city">
           
-              <div className="form-group mb-2">
+                       
+ <h3> {this.state.msg} </h3>
 
-                <div className="form-group mx-sm-3 mb-2">
 
 
-                  <form className="form-inline" onSubmit={this.getWeather} >
 
-                  <input type="text" name="city"  className="form-control" onChange={this.handlenum1Change} placeholder="Input City..."/>
-  
-    
-    <button className="btn btn-primary">Get Weather</button>
 
-    
-    </form> 
+                 
    
    
                   <Weather className="fish"
@@ -168,21 +136,18 @@ getWeather = async (e) => {
                     icon={this.state.icon}
                     error={this.state.error}
                   />
-          
- <h3> {this.state.msg} </h3>
-
-          <div className="clearfix"> 
 
       <div className="date"><p id="d"> {this.state.date}/{this.state.month}/{this.state.year}</p> 
 
+                       <h4 id="sh">Astronomy info </h4>
 
-<div>
+
+<div id="results">
     <Form getTrail={this.getTrail} />
 
 
+    
 
-
-       
               {this.state.moon_phase &&   <div> moon_phase: {this.state.moon_phase}</div>  }
                {this.state.sunset && this.state.sunsets && <div className="row"> <p> sunset Time: {this.state.sunset} </p> : <p> {this.state.sunsets} </p> </div> }
 
@@ -198,11 +163,8 @@ getWeather = async (e) => {
                {this.state.moon_state &&   <p> {this.state.moon_state} moon  </p> }
                {this.state.moon_hour && <p> hemisphere: {this.state.moon_hour} </p>  }
  </div>
+ 
  </div>
- </div>
-
-</div>
-</div>
  </div>
 
  </div>
@@ -213,3 +175,5 @@ getWeather = async (e) => {
   }
 }
  export default Layout;
+
+

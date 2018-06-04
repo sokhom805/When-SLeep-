@@ -4,9 +4,9 @@ import './App.css';
 const Weather = props => (
 
 
-  <div className="wrapper">
+  <div className="wrapper" >
 
-  <div className="weather">
+  <div className="weather2">
 
     <div className="city"><h1>{props.city}</h1></div>
 

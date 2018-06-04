@@ -8,7 +8,7 @@ const Form = props => (
 
 
 
-	<div className="wrap">
+	<div className="wrap2">
 		  <div className="form-row align-items-center">
 
 
