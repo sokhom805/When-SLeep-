@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
-const Weather = props => (<div className="wrapper">
+const Weather = props => (
+
+
+  <div className="wrapper">
 
   <div className="weather">
 
@@ -12,9 +15,11 @@ const Weather = props => (<div className="wrapper">
     <div className="clearfix" ></div>
 
     <div className="cont">
+
+    <summary><h3>Weather Info</h3></summary>
       <div className="icon">
 
-        <img className='img-fluid' src={`http://openweathermap.org/img/w/${props.icon}.png`} />
+        {props.icon && <figure > <img className='img-fluid' src={`http://openweathermap.org/img/w/${props.icon}.png`} /> </figure> }
       </div>
 
     </div>
@@ -25,8 +30,8 @@ const Weather = props => (<div className="wrapper">
 
 
       <p id="row"> {props.description} </p>
-      <div className="high"> <p> pressure:{props.pressure}</p> </div>
-      <div className="low"><p>  humidity {props.humidity} </p> </div>
+     {props.pressure &&  <div className="high"> <p>  pressure:{props.pressure}</p> </div> }
+     {props.humidity &&  <div className="low"><p>  humidity {props.humidity} </p> </div> }
       {props.clouds && <div className="low"><p>  cloud cover {props.clouds} % </p> </div>}
 
 

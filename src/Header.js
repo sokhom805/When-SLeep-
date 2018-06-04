@@ -8,6 +8,7 @@ export default class Header extends React.Component {
                     <div className="row">
                         <div className="col-lg-8 mx-auto">
                             <h1 className="brand-heading">Grayscale</h1>
+                            <br></br>
                             <p className="intro-text">A free, responsive, one page Bootstrap theme.
                                 <br />Created by Start Bootstrap.</p>
                             <a href="#about" className="btn btn-circle js-scroll-trigger">

@@ -20,7 +20,7 @@ import Layout from "./layout.js";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router";
 
 
 
@@ -152,16 +152,14 @@ class App extends React.Component {
     return (
       <div>
       
-        <div> 
+       {/*} <div> 
          <Router>
         
                
-        
-              <Route path="/" component={Home} />  
-            
-         
+        <Route path="/" exact component={Home} />
+       
         </Router>
-        </div>
+        </div>*/}
 
       
  </div>

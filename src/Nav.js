@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router";
 import './App.css';
 
 import Layout from "./layout.js";
@@ -11,11 +11,11 @@ export default class Nav extends React.Component {
 
 
 <div>
-    <Router>
+  
         <div>
                
            
-            <Route exact path="/layout" render={() => <Layout getWeather={this.getWeather} parentState={this.state} />} />
+            {/*<Route exact path="/layout" render={() => <Layout getWeather={this.getWeather} parentState={this.state} />} />*/}
            
             
    
@@ -43,7 +43,7 @@ export default class Nav extends React.Component {
     </nav>
 
 </div>
-        </Router>
+        
 
         </div>
   );}}

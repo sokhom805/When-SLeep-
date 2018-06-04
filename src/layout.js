@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
 import Weather from './Weather';
 import Form from './Form';
+import Nav from './Nav';
 import './layout.css';
 const API_KEY = "2a41aeea56aabfb9ff1218730fc32426";
 
@@ -129,10 +130,11 @@ getWeather = async (e) => {
 
       <div>
     <br></br><br></br><br></br> <br></br><br></br><br></br>
+    <Nav />
 
 
     <p> Search bellow </p>
-      <div className="container">
+      <div className="c">
 
     <div className="row">
 
