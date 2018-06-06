@@ -4,13 +4,114 @@ html {
     width: 100%;
     height: 100%;
 
-   background-color: black;
+    background-color: black;
 }
-  
 
-.Form-inline{
+.Form-inline {
 
-      display: block;
+    display: block;
     position: relative;
     top: 2002px;
+}
+
+#layout_page {
+    margin-top: 200px;
+}
+
+.search_form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+    .search_form{
+        width: auto;
+    }
+    .form-control{
+        margin-bottom: 20px;
+    }
+    .wrapper{
+        margin: auto;
+    }
+    .city {
+        font-family: 'Abril Fatface', serif;
+        font-weight: 300;
+        font-size: 1.4em;
+        color: #fcfcfc;
+        margin-bottom: -20px;
+        position: relative;
+        top: -110px;
+        letter-spacing: 1px;
+    }
+    .city_date{
+        top: 110px;
+    }
+    .date {
+        border-top: 3px solid #FFFFFF;
+        border-top: -220px;
+        /* text-align: center; */
+        position: relative;
+        top: -40px;
+        width: 401px;
+        left: 55px;
+        color: #FFFFFF;
+        font-size: 18pt;
+    }
+    .date #d{
+        margin-top: 5px;
+        text-align: center;
+        float: none;
+    }
+
+    #results {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 17.5em;
+        min-height: 22.5em;
+        background: #343a40;
+        margin: 2em auto;
+        border-radius: .1em;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #results .city {
+        font-family: 'Abril Fatface', serif;
+        font-weight: 300;
+        font-size: 1.4em;
+        color: #fcfcfc;
+        margin-bottom: -20px;
+        position: relative;
+        top: 0px;
+        letter-spacing: 1px;
+    }
+}
+@media(max-width: 576px){
+    .wrapper{
+        width: 320px;
+    }
+    .date{
+        width: 320px;
+        float: none;
+        left: 0px;
+        margin: auto;
+    }
+    #results{
+        width: 320px;
+    }
+}
+@media(max-width: 365px){
+    .wrapper{
+        width: 280px;
+    }
+    .date{
+        width: 280px;
+        float: none;
+        left: 0px;
+        margin: auto;
+    }
+    #results{
+        width: 280px;
+    }
 }

@@ -980,9 +980,9 @@ body {
     left: 50px;
   }
 
-  input[type=text] {
+  /*input[type=text] {
     width: 600px;
-  }
+  }*/
 
   .temp {
     width: 50%;
@@ -1201,9 +1201,9 @@ body {
     left: -10px;
   }
 
-  input[type=text] {
+  /*input[type=text] {
     width: 600px;
-  }
+  }*/
 
   .temp {
     width: 50%;
