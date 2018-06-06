@@ -1,3 +1,6 @@
+
+@import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
+
 body {
     font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: relative;
@@ -161,7 +164,14 @@ body {
     outline: none;
     background-color: transparent;
   }
+p{
 
+
+    color:#5b5b5b;
+      float: right;
+  font-family: Roboto;
+  font-size:.5em;
+}
   @media (min-width: 992px) {
     #mainNav {
       padding-top: 20px;
@@ -1161,22 +1171,75 @@ body {
     position:  relative;
     left: 650px;
 }
+#c{
+  text-align: center;
+}
 
+
+
+.card {
+  width:25em;
+  min-height:22.5em;
+  background: #fff;
+  margin:2em auto;
+  border-radius: .2em;
+  padding-top:1em;
+  padding-left: 1em;
+  padding-right:1em;
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    margin-left: 50px;
+    border-color: #28a745;
+}
 
 #results{
-position: relative;
-    left: 800px;
-    top: 190px;
-   
-
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 17.5em;
+    min-height: 22.5em;
+    background: #343a40;
+    margin: 2em auto;
+    border-radius: .1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 
   }
+
+
+#message{
+  position: relative;
+     top: 50px;
+    left: 650px
+}
+
+  .city {
+font-family: 'Abril Fatface', serif;
+  font-weight: 300;
+  font-size: 1.4em;
+color: #fcfcfc;
+    margin-bottom: -20px;
+    position: relative;
+    top: -120px;
+    letter-spacing: 1px;
+}
 
   @media screen and (max-width: 600px) {
  input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+}
+
+
+
+.intro-text{
+
+         margin-right: 74px;
+
 }
   .left,
   .date,
@@ -1189,17 +1252,23 @@ position: relative;
   }
 
   .date {
+  
     border-top: 3px solid #FFFFFF;
     border-top: -220px;
-
-    text-align: center;
-
+    /* text-align: center; */
     position: relative;
-    top: -50px;
+    top: 100px;
+    width: 401px;
+    left: 650px;
     color: #FFFFFF;
     font-size: 18pt;
 
+
   }
+  #d {
+    margin-right: 150px;
+    margin-top:6px;
+}
 
   .btn-primary {
 

@@ -152,14 +152,7 @@ class App extends React.Component {
     return (
       <div>
       
-       {/*} <div> 
-         <Router>
-        
-               
-        <Route path="/" exact component={Home} />
-       
-        </Router>
-        </div>*/}
+     
 
       
  </div>

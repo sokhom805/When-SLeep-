@@ -101,7 +101,7 @@ var clouds = data2.clouds.all;
   render() {
      return(
 
-      <div>
+      <div class="cont">
     <br></br><br></br><br></br> <br></br><br></br><br></br>
     <Nav />
 
@@ -116,7 +116,7 @@ var clouds = data2.clouds.all;
       <div id="city">
           
                        
- <h3> {this.state.msg} </h3>
+ <h3 id="message"> {this.state.msg} </h3>
 
 
 
@@ -139,13 +139,13 @@ var clouds = data2.clouds.all;
 
       <div className="date"><p id="d"> {this.state.date}/{this.state.month}/{this.state.year}</p> 
 
-                       <h4 id="sh">Astronomy info </h4>
+                       <h4 id="sh">Astronomy </h4>
 
 
 <div id="results">
     <Form getTrail={this.getTrail} />
 
-
+  <span className="city">Astronmical Times</span>
     
 
               {this.state.moon_phase &&   <div> moon_phase: {this.state.moon_phase}</div>  }
@@ -160,7 +160,7 @@ var clouds = data2.clouds.all;
               
 
 
-               {this.state.moon_state &&   <p> {this.state.moon_state} moon  </p> }
+               {this.state.moon_state &&   <p> {this.state.moon_state} moon  </p> } <br></br>
                {this.state.moon_hour && <p> hemisphere: {this.state.moon_hour} </p>  }
  </div>
  
